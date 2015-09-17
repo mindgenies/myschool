@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:id="@+id/ll">
+
+    <CheckBox
+        android:id="@+id/chkMilk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Milk" />
+
+    <CheckBox
+        android:id="@+id/chkEgg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Egg" />
+
+    <CheckBox
+        android:id="@+id/chkChappati"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chappati" />
+
+    <EditText
+        android:id="@+id/txtResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text" >
+
+        <requestFocus />
+    </EditText>
+
+</LinearLayout>

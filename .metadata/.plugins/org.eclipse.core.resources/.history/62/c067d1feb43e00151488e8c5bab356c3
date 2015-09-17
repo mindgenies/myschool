@@ -1,0 +1,40 @@
+package com.example.santosh2;
+
+import android.content.Context;
+import android.graphics.Paint;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
+import android.view.View;
+
+public class MyView extends View implements SensorEventListener {
+	
+	Paint p = new Paint();
+	float x,y,axisX,axisY,OldX,OldY;
+	boolean isFirst=true;
+
+	public MyView(Context c) {
+		super(context);
+		// TODO Auto-generated constructor stub
+		
+		SensorManager sm = (SensorManager)c.getSystemService(Context.SENSOR_SERVICE);
+		List<Sensor> list=sm.getSensorList(Sensor.TYPE_ACCELEROMETER);
+		Sensor s_acc=list.get(0);
+		sm.registerListener(this, s_acc, SensorManager.SENSOR_DELAY_FASTEST);
+
+	}
+
+	@Override
+	public void onAccuracyChanged(Sensor sensor, int accuracy) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onSensorChanged(SensorEvent event) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

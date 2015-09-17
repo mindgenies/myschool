@@ -1,0 +1,44 @@
+package com.example.santosh6;
+
+import java.util.ArrayList;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ListView;
+import android.widget.Toast;
+
+public class Santosh6Activity extends Activity implements OnClickListener {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_santosh6);
+		
+		ArrayList<food> fdlist = new ArrayList<food>();
+		fdlist.add(new food(this, R.drawable.food1, "Food1", "101 cal"));
+		fdlist.add(new food(this, R.drawable.food2, "Food2", "102 cal"));
+		fdlist.add(new food(this, R.drawable.food3, "Food3", "103 cal"));
+		fdlist.add(new food(this, R.drawable.food4, "Food4", "104 cal"));
+		fdlist.add(new food(this, R.drawable.food5, "Food5", "105 cal"));
+		fdlist.add(new food(this, R.drawable.food6, "Food6", "106 cal"));
+		fdlist.add(new food(this, R.drawable.food7, "Food7", "107 cal"));
+		fdlist.add(new food(this, R.drawable.food8, "Food8", "108 cal"));
+		fdlist.add(new food(this, R.drawable.food9, "Food9", "109 cal"));
+		fdlist.add(new food(this, R.drawable.food10, "Food10", "110 cal"));
+		fdlist.add(new food(this, R.drawable.food11, "Food11", "111 cal"));
+		fdlist.add(new food(this, R.drawable.food12, "Food12", "112 cal"));	
+		
+		ListView lv = (ListView) findViewById(R.id.lvmain);
+		RowAdaptor ra = new RowAdaptor(this,R.layout.row,fdlist); 
+		lv.setAdapter(ra);
+		lv.setOnClickListener(this);
+	}
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		Toast t = Toast.makeText(this, "My Test", Toast.LENGTH_SHORT).show();
+	}
+}
