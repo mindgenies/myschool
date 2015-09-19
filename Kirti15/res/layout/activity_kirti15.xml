@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tvsendSMS"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:textSize="50dp"
+        android:text="Send Text Message" />
+
+    <EditText
+        android:id="@+id/txtMobileNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Mobile No."
+        android:ems="10" >
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/txtMsg"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:hint="Enter Message"
+        android:ems="10" />
+
+    <Button
+        android:id="@+id/btnsend"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Send SMS" 
+        android:gravity="center"
+        android:paddingTop="10px"
+       
+        />
+
+</LinearLayout>
