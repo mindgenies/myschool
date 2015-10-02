@@ -1,0 +1,7 @@
+package com.example.santoshopengl;
+
+import android.opengl.GLSurfaceView;
+
+public class MainSurfaceView extends GLSurfaceView {
+
+}
